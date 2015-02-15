@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML5 Offline :  HTML5 offline Database CRUD Operation.</title>
+    <meta name="Description" content="HTML5 Offline :  HTML5 offline Database CRUD Operation."  />
+    <meta name="keywords" content="Naveensiwas.com, NS Blog, NS Blogs, PHP Tutorial, MySql Tutorial, PHP Framework, MVC Tutorial, MVC Framework, PHP MVC Framework, PHP MVC Tutorial, Laravel Tutorial, Codeigniter Tutorial, Jquery Tutorial, JavaScript Tutorial, JSON Tutorial, XML Tutorials, HTML5 Database, HTML5 Offline, Storage HTML5, Browser Storage, Local Storage, PayPal Tutorials, Online PayPal." />
+    <link rel="icon" href="http://www.naveensiwas.com/media/blog/images/favicon.png" type="image/x-icon"/>
+	<link rel="stylesheet" href="bs/css/bootstrap.min.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript" src="html5.databse.js"></script>
+	<style type="text/css">
+     	.row margin-bottom-20{margin-bottom: 40px;}
+	</style>
+</head>
+<body>
+<div style="width: 900px;margin-left: auto;margin-right: auto;">
+                        <h3>HTML5 Offline :  HTML5 offline Database CRUD Operation.</h3>
+                        <hr/>
+
+                        <div id="browserCompatibilityWebSql">
+                                  <div style="float:left;width:40%">
+                                      <form name="add_form" id="add_form" method="post">
+                                       <input type="hidden" name="edit_user_id" id="edit_user_id" value=""/>
+                                          <label class="control-label">Name</label>
+                                          <div style="margin-bottom: 50px;">
+                                              <div class="col-md-12 col-md-offset-0">
+                                                  <input type="text" class="form-control"  id="name" name="name" />
+                                              </div>                
+                                          </div>
+
+                                          <label class="control-label">Email</label>
+                                          <div style="margin-bottom: 50px;">
+                                              <div class="col-md-12 col-md-offset-0">
+                                                  <input type="text" class="form-control" id="email" name="email" />
+                                              </div>                
+                                          </div>
+
+                                          <div style="margin-bottom: 50px;">
+                                            <div class="col-md-12 col-md-offset-0">
+                                              <button type="submit" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Save Details" onclick="saveUserDetails();" id="save_record_div" ><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Save Details</button>
+                                              <button type="submit" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Update Details" onclick="updateUserDetails();" id="update_record_div" style="display:none;"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Update Details</button>
+                                            </div>
+                                          </div>  
+                                      </form>
+                                  </div>
+
+                                  <div style="float:right;width:60%;margin-top:2%;">
+                                       <table class="table table-bordered" id="show_edit_part" >
+                                       </table>  
+                                  </div>
+                         </div>
+</div>
+
+            <script type="text/javascript">
+                if (!window.openDatabase) 
+                {
+                      var browserCompatibilityWebSqlUI = '<div class="alert alert-warning">'
+                                                              +'<strong>Warning !</strong> Your Browser does not support HTML5 offline Database (WebSql) <br/> To see the demo please open in latest version of Safari, Chrome and Opera.'
+                                                          +'</div>';
+                       
+                     $("#browserCompatibilityWebSql").html(browserCompatibilityWebSqlUI);
+                }
+            </script>
+            
+</body>
+</html>
